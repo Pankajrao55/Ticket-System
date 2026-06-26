@@ -18,10 +18,12 @@ func main() {
 	// Setup Gin router
 	router := gin.Default()
 
-	// Health check endpoint
-	router.GET("/health", func(c *gin.Context) {
+	// Health check endpoint - GET and HEAD both supported
+	healthHandler := func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"status": "ok"})
-	})
+	}
+	router.GET("/health", healthHandler)
+	router.HEAD("/health", healthHandler)
 
 	// Auth routes - public (no JWT needed)
 	authRoutes := router.Group("/auth")

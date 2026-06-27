@@ -85,8 +85,8 @@ open → in_progress → closed
 ## Deployment
 
 Deployed on Render (free tier):  
-**URL**: `https://ticket-system-kv2y.onrender.com`  
-**Health Check**: `https://ticket-system-kv2y.onrender.com/health`
+**URL**: `https://ticket-system-mxnr.onrender.com`
+**Health Check**: `https://ticket-system-mxnr.onrender.com/health`
 
 ## Assumptions
 
